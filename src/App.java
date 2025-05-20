@@ -1,22 +1,24 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        // Instanciando um banco
         Banco banco = new Banco(1, "Banco Exemplo");
 
+        // Só para estetica para não ficar bagunçado
         System.out.println("\n==============================");
         System.out.println("Bem-vindo ao Sistema Bancário!");
         System.out.println("==============================\n");
 
-        // Adicionar clientes
+        // Adicionando clientes
         banco.adicionarCliente("João Silva", "12345678900");
         banco.adicionarCliente("Maria Oliveira", "98765432100");
 
-        // Criar contas
+        // Obter os clientes criados
         Cliente cliente1 = banco.getClientes().get(0);
         Cliente cliente2 = banco.getClientes().get(1);
 
+        // Criando contas correntes e poupanças
         banco.criarContaCorrente(1001, cliente1, 500.0);
         banco.criarContaPoupanca(2001, cliente1, 2.5);
-
         banco.criarContaCorrente(1002, cliente2, 1000.0);
 
         // Obter as contas criadas
@@ -24,7 +26,7 @@ public class App {
         Conta contaPoupanca1 = banco.getContas().get(1);
         Conta contaCorrente2 = banco.getContas().get(2);
 
-        // Realizar transações
+        // Realizando transações
         System.out.println("Realizando depósito na Conta Corrente 1...");
         contaCorrente1.depositar(1000.0);
 
@@ -41,7 +43,7 @@ public class App {
         System.out.println("Realizando saque na Conta Corrente 2...");
         contaCorrente2.sacar(500.0);
 
-        // Calcular rendimento da Conta Poupança
+        // Calculando o rendimento da Conta Poupança
         System.out.println("Calculando rendimento da Conta Poupança 1...");
         ((ContaPoupanca) contaPoupanca1).calcularRendimento();
 
@@ -55,6 +57,7 @@ public class App {
         System.out.println("Exibindo informações da Conta Corrente 2...");
         banco.exibirInformacoesConta(contaCorrente2);
 
+        // Só para estetica para não ficar bagunçado
         System.out.println("\n==============================");
         System.out.println("Operações concluídas com sucesso!");
         System.out.println("==============================\n");
