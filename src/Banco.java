@@ -129,6 +129,7 @@ public class Banco {
         System.out.println("Número da Conta: " + conta.getNumero());
         System.out.println("Cliente: " + conta.getCliente().getNome());
         System.out.println("Saldo: " + conta.getSaldo());
+        // Verifica o tipo da conta e exibe informações específicas
         if (conta instanceof ContaCorrente) {
             ContaCorrente cc = (ContaCorrente) conta;
             System.out.println("Limite Especial: " + cc.getLimiteEspecial());

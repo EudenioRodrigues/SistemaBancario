@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         // Instanciando um banco
-        Banco banco = new Banco(1, "Banco Exemplo");
+        Banco banco = new Banco(1, "Banco das Estrelas");
 
         // Só para estetica para não ficar bagunçado
         System.out.println("\n==============================");
@@ -9,8 +9,8 @@ public class App {
         System.out.println("==============================\n");
 
         // Adicionando clientes
-        banco.adicionarCliente("Ruan Silva", "12345678900");
-        banco.adicionarCliente("Verstappen dos Santos", "98765432100");
+        banco.adicionarCliente("Ruan Piastri da Silva", "12344321000");
+        banco.adicionarCliente("Verstappen dos Santos Oliveira", "98766789000");
 
         // Obter os clientes criados
         Cliente cliente1 = banco.getClientes().get(0);
