@@ -9,8 +9,8 @@ public class App {
         System.out.println("==============================\n");
 
         // Adicionando clientes
-        banco.adicionarCliente("João Silva", "12345678900");
-        banco.adicionarCliente("Maria Oliveira", "98765432100");
+        banco.adicionarCliente("Ruan Silva", "12345678900");
+        banco.adicionarCliente("Verstappen dos Santos", "98765432100");
 
         // Obter os clientes criados
         Cliente cliente1 = banco.getClientes().get(0);
