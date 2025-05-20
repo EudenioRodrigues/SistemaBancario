@@ -61,5 +61,12 @@ public class App {
         System.out.println("\n==============================");
         System.out.println("Operações concluídas com sucesso!");
         System.out.println("==============================\n");
+
+        /*
+         A interface Transacao padroniza as operações financeiras ao definir os métodos depositar e sacar. 
+         Isso garante que todas as classes que implementam a interface sigam o mesmo contrato, permitindo que o sistema seja flexível, 
+         extensível e fácil de manter. No projeto é demonstrado pelas implementações em ContaCorrente e ContaPoupanca, 
+         que seguem o mesmo padrão definido pela interface.
+         */
     }
 }
